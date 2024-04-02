@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="number">0</h2>
+    <button class="increase">+1</button>
+    <button class="decrease">-1</button>
+    <script>
+        const numberDisplay = document.querySelector('#number');
+        const decreaseButton = document.querySelector('.decrease');
+        const increaseButton = document.querySelector('.increase');
+        
+        let count = 0; // 카운터의 초기값 설정
+
+        decreaseButton.addEventListener('click', function() {
+            count -= 1; // 카운트 감소
+            console.log("decrease 가 클릭됨")
+            numberDisplay.textContent = count; // UI 업데이트
+        });
+
+        increaseButton.addEventListener('click', function() {
+            count += 1; // 카운트 증가
+            console.log("increase 가 눌려짐")
+            numberDisplay.textContent = count; // UI 업데이트
+        });
+    </script>
+</body>
+</html>
